@@ -4,8 +4,8 @@ import helmet from 'helmet';
 import { randomUUID } from 'node:crypto';
 import type { AppConfig } from './types';
 import { createLogger } from './utils/logger';
-import { createChatRouter } from './routes/chat.routes';
 import { globalError, notFound } from './middleware/errorHandler';
+import { createChatRouter } from './routes/chat.routes';
 
 const config: AppConfig = {
   port: parseInt(process.env.PORT ?? '3001', 10),
