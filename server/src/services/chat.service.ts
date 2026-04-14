@@ -2,7 +2,7 @@ import type { Logger } from 'pino';
 
 /** Keyword-to-response mapping for simulated intelligence */
 const RESPONSE_MAP: ReadonlyMap<string, string> = new Map([
-  ['hello', "Hello! I'm doing great. How can I help you today? I'm a streaming chatbot, so I'll respond word by word just like you see in ChatGPT!"],
+  ['hello', "Hello! I'm doing great. How can I help you today? I'm a streaming chatbot"],
   ['hi', "Hey there! Great to see you. What can I help you with today?"],
   ['how are you', "I'm functioning optimally, thank you for asking! I'm built with Node.js and Server-Sent Events for real-time streaming. Pretty cool, right?"],
   ['help', "I'd be happy to help! I can answer questions, have conversations, or demonstrate streaming responses. Try asking me about my architecture, tech stack, or capabilities!"],
