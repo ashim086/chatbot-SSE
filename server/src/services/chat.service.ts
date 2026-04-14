@@ -13,13 +13,12 @@ const RESPONSE_MAP: ReadonlyMap<string, string> = new Map([
   ['thank', "You're welcome! I'm glad I could help. Is there anything else you'd like to know?"],
   ['node', "Node.js is perfect for streaming applications because of its event-driven, non-blocking architecture. Combined with async generators and SSE, it can handle thousands of concurrent streaming connections efficiently."],
   ['typescript', "TypeScript strict mode catches bugs at compile time! Features like strictNullChecks, noUncheckedIndexedAccess, and exactOptionalPropertyTypes prevent common runtime errors. It's essential for production codebases."],
-  ['interview', "This project demonstrates several key concepts that impress in interviews: TypeScript strict mode, async generators, Server-Sent Events, proper error handling, structured logging, rate limiting, clean architecture, and production-ready patterns like Result types and middleware composition."],
 ]);
 
 /** Default response when no keyword matches */
 const DEFAULT_RESPONSES: ReadonlyArray<string> = [
   "That's an interesting point! I'm a demo chatbot with keyword-based responses. Try asking about my architecture, tech stack, streaming capabilities, or just say hello!",
-  "Thanks for your message! I have pre-programmed responses for certain keywords. Try: hello, help, architecture, tech stack, streaming, node, typescript, or interview.",
+  "Thanks for your message! I have pre-programmed responses for certain keywords. Try: hello, help, architecture, tech stack, streaming, node, typescript .",
   "I appreciate the conversation! While I'm currently keyword-based, my architecture is designed to easily integrate with real LLM APIs like OpenAI or Anthropic. Try asking about my tech stack!",
 ];
 
