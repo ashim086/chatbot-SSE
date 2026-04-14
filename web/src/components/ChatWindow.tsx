@@ -5,6 +5,7 @@ import { useStreamingChat } from '@/hooks/useStreamingChat';
 import { MessageBubble } from './chat/MessageBubble';
 import { ChatInput } from './chat/ChatInput';
 import { EmptyState } from './chat/EmptyState';
+import { MessageCircleMore } from 'lucide-react';
 
 export function ChatWindow() {
   const { messages, sendMessage, cancelStreaming, clearChat, isStreaming } =
@@ -17,37 +18,11 @@ export function ChatWindow() {
   }, [messages]);
 
   return (
-    <div className="flex flex-col h-screen bg-zinc-950 text-zinc-100 font-sans">
+    <div className="flex flex-col h-screen  text-zinc-100 font-sans">
       {/* Header */}
-      <header className="flex items-center justify-between px-6 py-4 border-b border-zinc-800 bg-zinc-950/90 backdrop-blur sticky top-0 z-10">
+      <header className="flex items-center justify-between px-6 py-4 border-b border-zinc-800 backdrop-blur sticky top-0 z-10">
         <div className="flex items-center gap-3">
-          <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-violet-600 to-fuchsia-600 flex items-center justify-center">
-            <svg
-              viewBox="0 0 20 20"
-              className="w-4 h-4 text-white fill-current"
-            >
-              <path
-                fillRule="evenodd"
-                d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1 className="text-sm font-semibold text-zinc-100">StreamChat</h1>
-            <div className="flex items-center gap-1.5">
-              <div
-                className={`w-1.5 h-1.5 rounded-full ${
-                  isStreaming
-                    ? 'bg-emerald-400 animate-pulse'
-                    : 'bg-zinc-600'
-                }`}
-              />
-              <span className="text-xs text-zinc-500">
-                {isStreaming ? 'Streaming...' : 'Ready'}
-              </span>
-            </div>
-          </div>
+          <MessageCircleMore />
         </div>
 
         <div className="flex items-center gap-2">
@@ -59,9 +34,6 @@ export function ChatWindow() {
               Clear
             </button>
           )}
-          <div className="text-xs text-zinc-600 bg-zinc-900 border border-zinc-800 px-2 py-1 rounded-md font-mono">
-            SSE
-          </div>
         </div>
       </header>
 

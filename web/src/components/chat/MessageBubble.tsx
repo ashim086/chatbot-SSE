@@ -17,10 +17,9 @@ export function MessageBubble({ message }: Props) {
       <div
         className={`
           flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold
-          ${
-            isUser
-              ? 'bg-violet-500 text-white'
-              : 'bg-zinc-800 border border-zinc-700 text-zinc-300'
+          ${isUser
+            ? 'bg-blue-500 text-white'
+            : 'bg-zinc-800 border border-zinc-700 text-zinc-300'
           }
         `}
       >
@@ -32,10 +31,9 @@ export function MessageBubble({ message }: Props) {
         <div
           className={`
             px-4 py-3 rounded-2xl text-sm leading-relaxed
-            ${
-              isUser
-                ? 'bg-violet-600 text-white rounded-tr-sm'
-                : 'bg-zinc-800/80 border border-zinc-700/50 text-zinc-100 rounded-tl-sm'
+            ${isUser
+              ? 'bg-blue-600 text-white rounded-tr-sm'
+              : 'bg-zinc-800/80 border border-zinc-700/50 text-zinc-100 rounded-tl-sm'
             }
             ${message.error ? 'border border-red-500/50 bg-red-900/20 text-red-300' : ''}
           `}
@@ -48,7 +46,7 @@ export function MessageBubble({ message }: Props) {
                 {message.content || ''}
               </ReactMarkdown>
               {message.isStreaming && (
-                <span className="inline-block w-0.5 h-4 bg-violet-400 ml-0.5 animate-pulse align-text-bottom" />
+                <span className="inline-block w-0.5 h-4 bg-blue-400 ml-0.5 animate-pulse align-text-bottom" />
               )}
             </div>
           )}

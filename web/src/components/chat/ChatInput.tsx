@@ -36,9 +36,9 @@ export function ChatInput({ onSend, onStop, isStreaming, disabled }: Props) {
   };
 
   return (
-    <div className="border-t border-zinc-800 bg-zinc-950/80 backdrop-blur px-4 py-4">
+    <div className="border-t border-gray-800 bg-gray-950/80 backdrop-blur px-4 py-4">
       <div className="max-w-3xl mx-auto">
-        <div className="relative flex items-end gap-2 bg-zinc-900 border border-zinc-700 rounded-2xl p-2 focus-within:border-violet-500 transition-colors">
+        <div className="relative flex items-end gap-2 bg-gray-900 border border-gray-700 rounded-2xl p-2 focus-within:border-blue-500 transition-colors">
           <textarea
             ref={textareaRef}
             value={value}
@@ -63,18 +63,14 @@ export function ChatInput({ onSend, onStop, isStreaming, disabled }: Props) {
               <button
                 onClick={handleSend}
                 disabled={!value.trim() || disabled}
-                className="px-3 py-1.5 rounded-xl bg-violet-600 hover:bg-violet-500 disabled:opacity-30 disabled:cursor-not-allowed text-white text-xs font-medium transition-colors flex items-center gap-1.5"
+                className="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:opacity-30 disabled:cursor-not-allowed text-white text-xs font-medium transition-colors flex items-center gap-1.5"
               >
                 Send
-                <kbd className="text-violet-300 text-[10px]">Enter</kbd>
+                <kbd className="text-blue-300 text-[10px]">Enter</kbd>
               </button>
             )}
           </div>
         </div>
-
-        <p className="text-center text-xs text-zinc-600 mt-2">
-          AI can make mistakes. Verify important information.
-        </p>
       </div>
     </div>
   );
